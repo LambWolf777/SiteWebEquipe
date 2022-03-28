@@ -89,6 +89,9 @@ li{
     position: fixed;  /* Use sticky if we want to put something above i.e page Title bar */
     background-color: var(--accent-chess-background);
 
+}
+
+
     z-index: 1;  /* Show above all other elements */
 
     display: flex;
@@ -96,6 +99,7 @@ li{
     justify-content: center;
     align-content: center;
 }
+
 
 .navbar * {
     flex: 1 1 auto;
@@ -105,6 +109,7 @@ li{
 .navbar a {
 
     display: block;
+
     text-align: center;
     font-size: max(1em, 2.5vw);
     padding: 15px;
@@ -112,6 +117,7 @@ li{
     background-color: var(--accent-c);
     border-radius: 25px;
 }
+
 
 .navbar a:hover {
     background-color: var(--accent-chess);
@@ -132,12 +138,18 @@ li{
 /* source: w3schools */
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+
     display: none;
     position: absolute;
     background-color: var(--accent-c);
     min-width: 160px;
     z-index: 1;
     border-radius: 25px;
+
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    transition: 0.2s ease-out;
+
 }
 
 /* Links inside the dropdown */
@@ -157,7 +169,58 @@ li{
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    transform: rotateX(0deg);
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0 10vh 0;
+}
+
+.container > p {
+    padding: 40px;
+    line-height: 150%;
+}
+
+
+.footer {
+    color: var(--accent-b);
+    padding: 0px;
+    background-color: var(--accent-chess-background);
+    text-align: center;
+    bottom: 0;
+
+    /* position: absolute; */
+    height: 30px;
+    width: 100%;
+    margin: 0;
+}
+
+.footer img {
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+.container h2 {
+    color: var(--accent-a);
+    font-weight: 600;
+}
+
+#contact {
+    padding: 20px;
+}
+
+li{
+    margin: 20px 0;
 }
 
 
@@ -230,6 +293,7 @@ li{
     object-fit: contain;
     min-width: 20vw;
     transition: 1s ease;
+
 }
 
 
@@ -237,14 +301,21 @@ li{
 #services img {
     height: 30vh;
     width: 30%;
-    object-fit: contain;
+
+    object-fit: scale-down;
+
     min-width: 20vw;
     transition: 1s ease;
 }
 
-#Services img:hover, #about img:hover {
+#Services img:hover{
     transform: scale(1.05);
 }
+
+img {    
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5) );
+}
+
 
 
 /* Media links / footer */
@@ -256,6 +327,7 @@ li{
     flex-flow: row nowrap;
     align-content: center;
     justify-content: center;
+
 
     color: var(--accent-b);
     padding: min(1vh, 1vw);
