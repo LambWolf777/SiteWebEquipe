@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
     <title>Chess</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
 </head>
 
 <!-- To keep track of what classes we use in order to avoid duplication, please write it here:
@@ -75,35 +78,50 @@
 
 
 <div class="container" id="about">
-    <h2>About us</h2>
+    <h1>About us</h1>
 
+    <div class="SideBySide">
+        <img src="assets/logo.png" alt="logo"/>
+            <p><span class="bold">We are the #1 chest community.</span> <br/><br/>
+                Back in 2005, me and my friend Jay decided the world needed a better chess website.
+                There were places to play online, but none of them felt like home. We imagined a site where people could
+                build
+                their chess home online and all in one place: to play in a safe and friendly environment, find friends,
+                save
+                their games, tell their chess stories, share ideas, and learn from each other.
+                was mid-way through a graduate degree at Stanford and all of my classmates were taking jobs in finance
+                or hot
+                tech companies. But I turned down job offers (including Facebook!) to follow the dream of building the
+                greatest
+                chess site the world had ever seen. And I convinced Jay’s wife to let him join me! Luckily enough, we
+                found out
+                that “chess.com” was coming available in a bankruptcy auction, and we bought the name.
+            </p>
+                <img src="assets/logo.png" alt="logo"/>
 
-    <p><span class="bold">We are the #1 chest community.</span><img src="assets/logo.png" alt="logo"/>
-        Back in 2005, me and my friend Jay decided the world needed a better chess website.
-        There were places to play online, but none of them felt like home. We imagined a site where people could build
-        their chess home online and all in one place: to play in a safe and friendly environment, find friends, save
-        their games, tell their chess stories, share ideas, and learn from each other.
-        was mid-way through a graduate degree at Stanford and all of my classmates were taking jobs in finance or hot
-        tech companies. But I turned down job offers (including Facebook!) to follow the dream of building the greatest
-        chess site the world had ever seen. And I convinced Jay’s wife to let him join me! Luckily enough, we found out
-        that “chess.com” was coming available in a bankruptcy auction, and we bought the name.
-        <br><br>
-        Over the next several years, Jay and I poured our life savings, our hearts, and most of our waking hours into
-        building Chess.com. But we never imagined what it is today!
-    </p>
-    <ul> <!--J'ai un problème où la liste ne veut pas se placer à côter du logo... -->
-        <li><span class="bold">Over ten million chess games every day.</span></li>
-        <li>More than <span class="bold">200 employes</span> across 35 countries!</li>
-        <li>Supports <span class="bold">more than 50 world class chess players, coaches, and professionals</span> by
-            paying them to create awesome content.
-        </li>
-    </ul>
-</div>
+    </div>
+        <div class="Under">
+        <p>
+                Over the next several years, Jay and I poured our life savings, our hearts, and most of our waking hours
+                into
+                building Chess.com. But we never imagined what it is today!
+            </p>
 
-<!-- Maybe put links to different sections: play/puzzles/learn/etc... -->
+            <ul>
+                <li><span class="bold">Over ten million chess games every day.</span></li>
+                <li>More than <span class="bold">200 employes</span> across 35 countries!</li>
+                <li>Supports <span
+                        class="bold">more than 50 world class chess players, coaches, and professionals</span> by
+                    paying them to create awesome content.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<!-- TODO: Weird behavior from the p and the general container margins/padding ..???-->
 <div class="container" id="services">
-    <h2>Our services</h2>
-    <div>
+    <h1>Our services</h1>
+    <div class="triple-image">
         <a aria-label="Chess league"
            href="https://www.chess.com/leagues">
             <img src="assets/chessleague.png" alt="logo">
@@ -122,7 +140,8 @@
     <p>Chess.com offers a wide array of ways to enjoy chess. Online matchmaking, tournaments, puzzles, news as well as
         multiple ways to learn and sharpen up your skills.
         <br><br>
-        Simply put, Chess.com is <span class="italic">the</span> hub for anything chess. </p>
+        Simply put, Chess.com is <span class="italic">the</span> hub for anything chess.
+    </p>
 </div>
 
 
@@ -146,50 +165,50 @@
     <p id="copyright">&copy; IFT1005 2022</p>
     <div id="media-links">
         <a aria-label="App for iOS / iPhone / iPad"
-            class="contact-button"
-            href="https://www.chess.com/play/apps/ios">
+           class="contact-button"
+           href="https://www.chess.com/play/apps/ios">
             <img id="apple-logo"/>
         </a>
 
         <a aria-label="App for Android"
-            class="contact-button"
-            href="https://www.chess.com/play/apps/android">
+           class="contact-button"
+           href="https://www.chess.com/play/apps/android">
             <img id="android-logo"/>
         </a>
 
         <a aria-label="Facebook"
-            class="contact-button"
-            href="https://www.facebook.com/chess">
+           class="contact-button"
+           href="https://www.facebook.com/chess">
             <img id="facebook-logo">
         </a>
 
         <a aria-label="Twitter"
-            class="contact-button"
-            href="https://twitter.com/chesscom">
+           class="contact-button"
+           href="https://twitter.com/chesscom">
             <img id="twitter-logo"/>
         </a>
 
         <a aria-label="Youtube"
-            class="contact-button"
-            href="https://www.youtube.com/user/wwwChesscom">
+           class="contact-button"
+           href="https://www.youtube.com/user/wwwChesscom">
             <img id="youtube-logo"/>
         </a>
 
         <a aria-label="Twitch"
-            class="contact-button"
-            href="https://www.twitch.tv/chess">
+           class="contact-button"
+           href="https://www.twitch.tv/chess">
             <img id="twitch-logo">
         </a>
 
         <a aria-label="Instagram"
-            class="contact-button"
-            href="https://www.instagram.com/wwwchesscom">
+           class="contact-button"
+           href="https://www.instagram.com/wwwchesscom">
             <img id="instagram-logo"/>
         </a>
 
         <a aria-label="Discord"
-            class="contact-button"
-            href="https://discord.gg/3VbUQME">
+           class="contact-button"
+           href="https://discord.gg/3VbUQME">
             <img id="discord-logo"/>
         </a>
     </div>

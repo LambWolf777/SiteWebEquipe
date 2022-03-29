@@ -55,7 +55,7 @@ img {
     border-color: var(--Primary-color);
 
     background-color: var(--Secondary-Color);
-    padding: 5%;
+    padding: 2%;
     margin: 5%;
 }
 
@@ -69,7 +69,6 @@ img {
 }
 
 .container > p {
-    padding: 40px;
     line-height: 150%;
 }
 
@@ -89,9 +88,6 @@ input {
 .italic {
     font-style: italic;
     font-size: 1.2em;
-}
-img {
-    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5) );
 }
 
 
@@ -205,10 +201,6 @@ img {
     content: url("assets/chessboard.png");
 }
 
-.jumbo {
-    padding: 2%;
-}
-
 .jumbo img{
     height: 80vh;
     width: 80%;
@@ -221,7 +213,6 @@ img {
     width: 100%;
 }
 
-/* TODO: Make it like the real chess.com buttons! */
 .jumbo button {
     color: var(--Ternary-color);
     background-color: var(--Secondary-Color);
@@ -241,30 +232,59 @@ img {
 
 
 /* About */
+#about {
+    display: block;
+}
+
+#about h1 {
+    text-align: center;
+}
+
+#about p {
+    color: var(--Ternary-color);
+    padding: 2.5%;
+}
+
 #about img {
-    float: left;
-    shape-outside: border-box;
     height: 30vh;
-    width: 30%;
     object-fit: contain;
     min-width: 20vw;
-    transition: 1s ease;
+}
+
+.SideBySide {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.Under p, ul {
+    padding: 1% 5% !important;
+    font-size: 1.2em;
+}
+
+.Under ul {
+    margin-left: 5%;
+    line-height: 200%;
 }
 
 
 /* Services */
-#services img {
-    height: 30vh;
-    width: 30%;
+.triple-image {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.triple-image img {
+    flex: 1 1;
+    margin: 0 min(4vw, 4vh);
+    height: min(30vh, 30vw);
 
     object-fit: scale-down;
 
-    min-width: 20vw;
-    transition: 1s ease;
+    transition: 0.5s ease;
 }
 
-#Services img:hover{
-    transform: scale(1.05);
+.triple-image img:hover{
+    transform: scale(1.10);
 }
 
 
@@ -324,15 +344,6 @@ img {
     right: 5%;
 }
 
-#media-links a {
-    /*width: 80%;*/
-    /*flex-grow: 1;*/
-    /*flex-shrink: 1;*/
-}
-
-#media-links img {
-    /*width: inherit;*/
-}
 
 #android-logo {
     content: url("assets/android.png")
