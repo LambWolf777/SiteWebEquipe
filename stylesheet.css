@@ -1,36 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
-    /*variables*/
-    /* --Main-color:
-    --Secondary-color:
-
-    --Background-color: */
+    --Primary-color: rgb(127, 166, 80);  /* Chess Green */
+    --Secondary-Color: rgb(49, 46 ,43);  /* Chess black */
+    --Ternary-color: rgb(238,237,211);  /* Chess white/cream */
 
     --accent-a: #2596be;
     --accent-b: white;
     --accent-c: whitesmoke;
     --accent-d: black;
     --accent-e: #ffbc3a;
-    --accent-chess: rgb(127, 166, 80);
-    --accent-chess-background: rgb(49, 46 ,43);
+
 
     --navbar-height: 70px;
     --brand-logo-height: 50px;
     --navbar-padding: calc((var(--navbar-height) - var(--brand-logo-height))/2 );
+    --footer-height: min(7vw, 7vh);
 }
 
+/* general */
 body {
-    overflow-x: hidden; /* Mettre scroll bar? */
-    margin: 0;
+    /*overflow-x: hidden; !* Mettre scroll bar? *!*/
     scroll-behavior: smooth;
-    padding: 0;
 
     /* ajouts*/
-    margin-top: var(--navbar-height);
+    background-color: var(--Ternary-color);
+    margin: 0;
     font-family: 'Varela Round', sans-serif;
     color: var(--accent-d);
-    box-sizing: border-box;
 }
 
 body * {
@@ -42,148 +39,166 @@ a {
     color: inherit;
 }
 
-.navbar {
-    top: 0;
-    width: 100%;
-    padding: var(--navbar-padding);
-    position: fixed;  /* Use sticky if we want to put something above i.e page Title bar */
-    background-color: var(--accent-chess-background);
+img {
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5) );
 }
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.navbar li {
-    float: left;
-    margin-left: 5px;
-}
-
-.navbar li a {
-    display: block;
-    padding: 15px;
-    transition: 0.5s;
-    background-color: var(--accent-c);
-    border-radius: 25px;
-}
-
-.navbar li a:hover {
-    display: block;
-    padding: 15px;
-    background-color: var(--accent-chess);
-    color: var(--accent-c);
-    border-radius: 25px;
-}
-
-.navbar li img {
-    width: auto;
-    height: var(--brand-logo-height);
-    margin: 0 20px 0 20px;
-}
-
-/* source: w3schools */
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--accent-c);
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 25px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: var(--accent-chess);
-    color: var(--accent-b) !important;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 
 .container {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10vh 0 10vh 0;
+
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 8px;
+    border-color: var(--Primary-color);
+
+    background-color: var(--Secondary-Color);
+    padding: 2%;
+    margin: 5%;
+}
+
+
+.raw_link {
+    transition: 0.5s;
+}
+
+.raw_link:hover {
+    color: var(--Primary-color)
 }
 
 .container > p {
-    padding: 40px;
     line-height: 150%;
 }
 
-
-.footer {
-    color: var(--accent-b);
-    padding: 0px;
-    background-color: var(--accent-chess-background);
-    text-align: center;
-    bottom: 0;
-
-    /* position: absolute; */
-    height: 30px;
-    width: 100%;
-    margin: 0;
-}
-
-.footer img {
-    width: 20px;
-    height: 20px;
+.container > p, h1, h2, h3, li, form {
+    color: var(--Ternary-color);
 }
 
 input {
     width: 100%;
 }
 
-.container h2 {
-    color: var(--accent-a);
-    font-weight: 600;
+.bold {
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
-#contact {
-    padding: 20px;
+.italic {
+    font-style: italic;
+    font-size: 1.2em;
 }
 
-li{
-    margin: 20px 0;
+
+/* TODO: Services arrow SVG wraps down when page is shrunk */
+/* navbar */
+.navbar {
+    top: 0;
+    width: 100%;
+    padding: var(--navbar-padding);
+    position: fixed;  /* Use sticky if we want to put something above i.e page Title bar */
+    background-color: var(--Secondary-Color);
+
+    z-index: 1;  /* Show above all other elements */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--Primary-color)
 }
+
+
+.navbar * {
+    font-weight: 800;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+.navbar a {
+
+    display: block;
+
+    text-align: center;
+    font-size: max(1em, 1vw);
+
+    padding: 15px;
+    transition: 0.5s;
+    background-color: var(--Ternary-color);
+    color: var(--Secondary-Color);
+    border-radius: 25px;
+}
+
+
+.navbar a:hover {
+    background-color: var(--Primary-color);
+    color: var(--Ternary-color);
+}
+
+.navbar img {
+    flex: 0 0 auto !important;
+    height: var(--brand-logo-height);
+    margin: 0 min(20px, 1vh);
+}
+
+
+/* source: w3schools */
+/* Dropdown Content (Hidden by Default) */
+.dropdown {
+    margin: 0;
+}
+
+.dropdown-content {
+
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);  /* transparent */
+    z-index: 1;
+    border-radius: 25px;
+
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    transition: 0.3s ease-out;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    /*width: 90%;*/
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--Primary-color);
+    color: var(--accent-b) !important;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    transform: rotateX(0deg);
+}
+
 
 
 /* Home */
 
 #home {
-    /*background-size: cover;*/
-    /*background-image: url("assets/chessboard.png");*/
+    margin-top: calc(1.5 * var(--navbar-height));
     text-align: center;
     font-size: 1.5em;
 }
 
 #chessboard {
     content: url("assets/chessboard.png");
-}
-
-.jumbo {
-    padding: 2%;
-    margin: auto;
 }
 
 .jumbo img{
@@ -198,85 +213,137 @@ li{
     width: 100%;
 }
 
-/* TODO: Make it like the real chess.com buttons! */
 .jumbo button {
-    background-color: var(--accent-b);
-    color: var(--accent-a);
+    color: var(--Ternary-color);
+    background-color: var(--Secondary-Color);
     font-size: 0.6em;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
-    transition: 0.15s ease-in;
+    transition: 0.3s;
   }
 
 .jumbo button:hover {
-    background-color: var(--accent-e);
-    color: var(--accent-b) !important;
+    color: var(--Primary-color);
+    transform: scale(1.2);
 }
 
 
 /* About */
-.bold {
-    font-weight: 800;
-    font-size: 1.2em;
+#about {
+    display: block;
 }
 
-.italic {
-    font-style: italic;
-    font-size: 1.2em;
+#about h1 {
+    text-align: center;
+}
+
+#about p {
+    color: var(--Ternary-color);
+    padding: 2.5%;
 }
 
 #about img {
-
-    float: left;
-    shape-outside: border-box;
     height: 30vh;
-    width: 30%;
     object-fit: contain;
     min-width: 20vw;
-    transition: 1s ease;
+}
+
+.SideBySide {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.Under p, ul {
+    padding: 1% 5% !important;
+    font-size: 1.2em;
+}
+
+.Under ul {
+    margin-left: 5%;
+    line-height: 200%;
 }
 
 
 /* Services */
-#services img {
-    height: 30vh;
-    width: 30%;
-    object-fit: contain;
-    min-width: 20vw;
-    transition: 1s ease;
+.triple-image {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-#Services img:hover, #about img:hover {
-    transform: scale(1.05);
+.triple-image img {
+    flex: 1 1;
+    margin: 0 min(4vw, 4vh);
+    height: min(30vh, 30vw);
+
+    object-fit: scale-down;
+
+    transition: 0.5s ease;
 }
 
-img {    
-    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5) );
+.triple-image img:hover{
+    transform: scale(1.10);
 }
+
+
+/* Contact */
+#Nous-contacter {
+    margin-bottom: calc(1.5 * var(--footer-height))
+}
+
+
 
 
 /* Media links / footer */
 /* position/alignement will depend on other sections */
-#media-links {
-    width: 40%;
+
+.footer {
+    position: fixed;
     display: flex;
     flex-flow: row nowrap;
     align-content: center;
     justify-content: center;
-    background-color: var(--accent-chess-background);
+
+
+    padding: min(1vh, 1vw);
+    background-color: var(--Secondary-Color);
+    /*text-align: center;*/
+    bottom: 0;
+
+    height: var(--footer-height);
+    width: 100%;
+    margin: 0;
+
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: var(--Primary-color)
 }
 
-#media-links a {
-    width: 50%;
-    flex: 1 1 10%;
+
+.footer img {
+    margin-left: min(1vw, 1vh);
+    height: min(5vw, 5vh);
 }
 
-#media-links img {
-    width: inherit;
+#copyright {
+    color: var(--Ternary-color);
+    margin: min(1vw, 1vh) 0;
+    font-size: min(2vw, 2vh);
+    position: absolute;
+    left: 5%;
 }
+
+#media-links {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: inherit;
+    position: absolute;
+    right: 5%;
+}
+
 
 #android-logo {
     content: url("assets/android.png")
