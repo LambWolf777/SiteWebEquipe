@@ -133,7 +133,6 @@ input {
     border-radius: 25px;
 }
 
-
 .navbar a:hover {
     background-color: var(--Primary-color);
     color: var(--Ternary-color);
@@ -163,7 +162,6 @@ input {
     transform-origin: top center;
     transform: rotateX(90deg);
     transition: 0.3s ease-out;
-
 }
 
 /* Links inside the dropdown */
@@ -173,21 +171,19 @@ input {
     padding: 12px 16px;
     text-decoration: none;
     border-radius: 10px;
+    font-size: 15px;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: var(--Primary-color);
-    color: var(--accent-b) !important;
-
+    color: var(--Ternary-color) !important;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     transform: rotateX(0deg);
 }
-
-
 
 /* Home */
 
@@ -293,9 +289,6 @@ input {
     margin-bottom: calc(1.5 * var(--footer-height))
 }
 
-
-
-
 /* Media links / footer */
 /* position/alignement will depend on other sections */
 
@@ -343,6 +336,16 @@ input {
     position: absolute;
     right: 5%;
 }
+
+.popUpYes
+{
+  background-color: var(--Ternary-color);
+}
+
+.popUpYes:hover
+{
+  background-color: var(--Primary-color);
+}    
 
 
 #android-logo {
