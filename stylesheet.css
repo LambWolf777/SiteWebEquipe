@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
-    /*variables*/
-    /* --Main-color:
-    --Secondary-color:*/
-
-
-
-    --Main-color: rgb(127, 166, 80);  /* Chess Green */
+    --Primary-color: rgb(127, 166, 80);  /* Chess Green */
     --Secondary-Color: rgb(49, 46 ,43);  /* Chess black */
     --Ternary-color: rgb(238,237,211);  /* Chess white/cream */
 
@@ -21,20 +15,19 @@
     --navbar-height: 70px;
     --brand-logo-height: 50px;
     --navbar-padding: calc((var(--navbar-height) - var(--brand-logo-height))/2 );
+    --footer-height: min(7vw, 7vh);
 }
 
 /* general */
 body {
-    overflow-x: hidden; /* Mettre scroll bar? */
-    margin: 0;
+    /*overflow-x: hidden; !* Mettre scroll bar? *!*/
     scroll-behavior: smooth;
-    padding: 0;
 
     /* ajouts*/
-    margin-top: var(--navbar-height);
+    background-color: var(--Ternary-color);
+    margin: 0;
     font-family: 'Varela Round', sans-serif;
     color: var(--accent-d);
-    box-sizing: border-box;
 }
 
 body * {
@@ -51,17 +44,37 @@ img {
 }
 
 .container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10vh 0 10vh 0;
+
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 8px;
+    border-color: var(--Primary-color);
+
+    background-color: var(--Secondary-Color);
+    padding: 5%;
+    margin: 5%;
+}
+
+
+.raw_link {
+    transition: 0.5s;
+}
+
+.raw_link:hover {
+    color: var(--Primary-color)
 }
 
 .container > p {
     padding: 40px;
     line-height: 150%;
+}
+
+.container > p, h1, h2, h3, li, form {
+    color: var(--Ternary-color);
 }
 
 input {
@@ -82,6 +95,7 @@ img {
 }
 
 
+/* TODO: Services arrow SVG wraps down when page is shrunk */
 /* navbar */
 .navbar {
     top: 0;
@@ -96,6 +110,10 @@ img {
     flex-flow: row nowrap;
     justify-content: center;
     align-content: center;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--Primary-color)
 }
 
 
@@ -121,7 +139,7 @@ img {
 
 
 .navbar a:hover {
-    background-color: var(--Main-color);
+    background-color: var(--Primary-color);
     color: var(--Ternary-color);
 }
 
@@ -163,7 +181,7 @@ img {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: var(--Main-color);
+    background-color: var(--Primary-color);
     color: var(--accent-b) !important;
 
 }
@@ -174,30 +192,11 @@ img {
 }
 
 
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10vh 0 10vh 0;
-}
-
-.container > p {
-    padding: 40px;
-    line-height: 150%;
-}
-
-input {
-    width: 100%;
-}
-
 
 /* Home */
 
 #home {
-    /*background-size: cover;*/
-    /*background-image: url("assets/chessboard.png");*/
+    margin-top: calc(1.5 * var(--navbar-height));
     text-align: center;
     font-size: 1.5em;
 }
@@ -208,21 +207,12 @@ input {
 
 .jumbo {
     padding: 2%;
-    margin: auto;
 }
 
 .jumbo img{
     height: 80vh;
     width: 80%;
     object-fit: contain;
-}
-
-.raw_link {
-    transition: 0.5s;
-}
-
-.raw_link:hover {
-    color: var(--Main-color)
 }
 
 #button {
@@ -245,14 +235,13 @@ input {
   }
 
 .jumbo button:hover {
-    color: var(--Main-color);
+    color: var(--Primary-color);
     transform: scale(1.2);
 }
 
 
 /* About */
 #about img {
-
     float: left;
     shape-outside: border-box;
     height: 30vh;
@@ -260,7 +249,6 @@ input {
     object-fit: contain;
     min-width: 20vw;
     transition: 1s ease;
-
 }
 
 
@@ -277,6 +265,12 @@ input {
 
 #Services img:hover{
     transform: scale(1.05);
+}
+
+
+/* Contact */
+#Nous-contacter {
+    margin-bottom: calc(1.5 * var(--footer-height))
 }
 
 
@@ -298,9 +292,13 @@ input {
     /*text-align: center;*/
     bottom: 0;
 
-    height: min(7vw, 7vh);
+    height: var(--footer-height);
     width: 100%;
     margin: 0;
+
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: var(--Primary-color)
 }
 
 
