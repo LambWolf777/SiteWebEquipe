@@ -39,9 +39,9 @@
             </svg>
         </a>
         <div class="dropdown-content">
-            <a href="#services">Service 1</a>
-            <a href="#services">Service 2</a>
-            <a href="#services">Service 3</a>
+            <a href="#service1">Pro League</a>
+            <a href="#service2">Arena Kings</a>
+            <a href="#service3">Titled Tuesday</a>
         </div>
     </div>
 
@@ -117,26 +117,34 @@
             </ul>
         </div>
     </div>
-
 <!-- TODO: Weird behavior from the p and the general container margins/padding ..???-->
-<div class="container" id="services">
-    <h1>Our services</h1>
-    <div class="triple-image">
-        <a aria-label="Chess league"
-           href="https://www.chess.com/leagues">
-            <img src="assets/chessleague.png" alt="logo">
-        </a>
+<div class="container" id="services"><h1>Our services</h1></div>
 
-        <a aria-label="Chesskid"
-           href="https://www.chess.com/article/view/arena-kings-season-9">
-            <img src="assets/arenakings.png" alt="logo">
-        </a>
-        <a aria-label="Titled tuesday"
-           href="https://www.chess.com/tournament/live/titled-tuesdays">
-            <img src="assets/titledtuesday.png" alt="logo">
+<div class="container" id="service1">
+    <h2>Chess League</h2>
+    <h3>Fight with other players to obtain weekly trophies and rating points.</h3>
+    <a aria-label="Chess league"
+        href="https://www.chess.com/leagues">
+        <img src="assets/chessleague.png" alt="logo">
+    </a>
+</div>
 
-        </a>
-    </div>
+<div class="container" id="service2">
+    <h2>Arena Kings</h2>
+    <h3>This service allows for open tournaments to take place on the website where players battle in either rated or unrated games.</h3>
+    <a aria-label="Chesskid"
+        href="https://www.chess.com/article/view/arena-kings-season-9">
+        <img src="assets/arenakings.png" alt="logo">
+    </a>
+</div>
+
+<div class="container" id="service3">
+    <h2>Titled Tuesday</h2>
+    <h3>Where titled players battle each other to win prize money in a 9 round chess tournament.</h3>
+    <a aria-label="Titled tuesday"
+        href="https://www.chess.com/tournament/live/titled-tuesdays">
+        <img src="assets/titledtuesday.png" alt="logo">
+    </a>
     <p>Chess.com offers a wide array of ways to enjoy chess. Online matchmaking, tournaments, puzzles, news as well as
         multiple ways to learn and sharpen up your skills.
         <br><br>
@@ -144,24 +152,21 @@
     </p>
 </div>
 
-
 <div class="container" id="Nous-contacter">
     <h2>Contact us</h2>
     <form action="https://www.w3schools.com/action_page.php">
         <label for="nom">Your name:</label><br>
-        <input type="text" id="nom" name="name" value=""><br><br><br>
+        <input type="text" id="nom" name="name" value="" class="popUpYes"><br><br><br>
         <label for="email">Email adress:</label><br>
-        <input type="email" id="email" name="email"> <br><br><br>
+        <input type="email" id="email" name="email" class="popUpYes"> <br><br><br>
         <label for="email">Your message</label><br>
-        <textarea rows="4" cols="50" name="comment"></textarea>
+        <textarea rows="4" cols="50" name="comment" class="popUpYes"></textarea>
         <br><br>
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" class="popUpYes">
     </form>
-
-    <!-- Liens divers, media sociaux, appstores; ira possiblement en footer -->
 </div>
-<div class="footer">
 
+<div class="footer">
     <p id="copyright">&copy; IFT1005 2022</p>
     <div id="media-links">
         <a aria-label="App for iOS / iPhone / iPad"
