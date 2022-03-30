@@ -289,29 +289,16 @@ input {
 }
 
 .sub-container img {
-    height: 30vh;
+    flex: 1 1;
+    margin: min(2vw, 2vh);
+    height: min(30vh, 30vw);
+
+    transition: 0.5s ease;
 }
 
-
-
-/*.triple-image {*/
-/*    display: flex;*/
-/*    flex-flow: row nowrap;*/
-/*}*/
-
-/*.triple-image img {*/
-/*    flex: 1 1;*/
-/*    margin: 0 min(4vw, 4vh);*/
-/*    height: min(30vh, 30vw);*/
-
-/*    object-fit: scale-down;*/
-
-/*    transition: 0.5s ease;*/
-/*}*/
-
-/*.triple-image img:hover{*/
-/*    transform: scale(1.10);*/
-/*}*/
+.sub-container img:hover{
+    transform: scale(1.10);
+}
 
 
 /* Contact */
