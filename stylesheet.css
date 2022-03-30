@@ -72,7 +72,7 @@ img {
     line-height: 150%;
 }
 
-.container > p, h1, h2, h3, li, form {
+.container > * {
     color: var(--Ternary-color);
 }
 
@@ -264,24 +264,54 @@ input {
 
 
 /* Services */
-.triple-image {
+
+.sub-container {
+    width: 90%;
+    border-color: var(--Primary-color);
+    background-color: var(--Ternary-color);
+
+    /* Rest is inherited from container ... */
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 5px;
+    padding: 2%;
+    margin: 5%;
 }
 
-.triple-image img {
-    flex: 1 1;
-    margin: 0 min(4vw, 4vh);
-    height: min(30vh, 30vw);
-
-    object-fit: scale-down;
-
-    transition: 0.5s ease;
+.sub-container > * {
+    font-size: 1.2em;
+    color: var(--Secondary-Color);
 }
 
-.triple-image img:hover{
-    transform: scale(1.10);
+.sub-container img {
+    height: 30vh;
 }
+
+
+
+/*.triple-image {*/
+/*    display: flex;*/
+/*    flex-flow: row nowrap;*/
+/*}*/
+
+/*.triple-image img {*/
+/*    flex: 1 1;*/
+/*    margin: 0 min(4vw, 4vh);*/
+/*    height: min(30vh, 30vw);*/
+
+/*    object-fit: scale-down;*/
+
+/*    transition: 0.5s ease;*/
+/*}*/
+
+/*.triple-image img:hover{*/
+/*    transform: scale(1.10);*/
+/*}*/
 
 
 /* Contact */
